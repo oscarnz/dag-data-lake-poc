@@ -1,5 +1,0 @@
-[2024-03-19T12:46:12.082+0000] {task_command.py:423} INFO - Running <TaskInstance: my_first_dag.task_2 scheduled__2023-10-02T11:43:00+00:00 [up_for_retry]> on host bd6fac3e70de
-[2024-03-19T12:46:13.905+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='your_name' AIRFLOW_CTX_DAG_ID='my_first_dag' AIRFLOW_CTX_TASK_ID='task_2' AIRFLOW_CTX_EXECUTION_DATE='2023-10-02T11:43:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-10-02T11:43:00+00:00'
-[2024-03-19T12:46:13.993+0000] {logging_mixin.py:188} INFO - Executing Task 2
-[2024-03-19T12:46:14.000+0000] {python.py:202} INFO - Done. Returned value was: None
-[2024-03-19T12:46:14.121+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=my_first_dag, task_id=task_2, execution_date=20231002T114300, start_date=20240319T124605, end_date=20240319T124614
