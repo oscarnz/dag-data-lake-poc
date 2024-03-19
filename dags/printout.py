@@ -1,16 +1,18 @@
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 from datetime import datetime
+from datetime import timedelta
 
 #Define default arguments
 default_args = {
  'owner': 'your_name',
  'start_date': datetime (2023, 9, 29),
  'retries': 1,
+ 'schedule_interval': '*/1 * * * *',
 }
 
 # Instantiate your DAG
-dag = DAG ('my_first_dag', default_args=default_args, schedule_interval=None)
+dag = DAG ('my_first_dag', default_args=default_args, schedule_interval=timedelta(minutes=1))
 
 # Define tasks
 def task1():
