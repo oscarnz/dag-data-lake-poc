@@ -1,0 +1,14 @@
+[2024-03-20T04:44:04.518+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Airflow_and_Cassandra.get_rest_api_data manual__2024-03-20T04:44:02.018684+00:00 [queued]>
+[2024-03-20T04:44:04.529+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Airflow_and_Cassandra.get_rest_api_data manual__2024-03-20T04:44:02.018684+00:00 [queued]>
+[2024-03-20T04:44:04.529+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-03-20T04:44:04.543+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): get_rest_api_data> on 2024-03-20 04:44:02.018684+00:00
+[2024-03-20T04:44:04.562+0000] {standard_task_runner.py:60} INFO - Started process 7059 to run task
+[2024-03-20T04:44:04.569+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Airflow_and_Cassandra', 'get_rest_api_data', 'manual__2024-03-20T04:44:02.018684+00:00', '--job-id', '370', '--raw', '--subdir', 'DAGS_FOLDER/insert_cassandra.py', '--cfg-path', '/tmp/tmps3ochplv']
+[2024-03-20T04:44:04.572+0000] {standard_task_runner.py:88} INFO - Job 370: Subtask get_rest_api_data
+[2024-03-20T04:44:04.636+0000] {task_command.py:423} INFO - Running <TaskInstance: Airflow_and_Cassandra.get_rest_api_data manual__2024-03-20T04:44:02.018684+00:00 [running]> on host 52dfb58d56f6
+[2024-03-20T04:44:04.704+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Airflow_and_Cassandra' AIRFLOW_CTX_TASK_ID='get_rest_api_data' AIRFLOW_CTX_EXECUTION_DATE='2024-03-20T04:44:02.018684+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-03-20T04:44:02.018684+00:00'
+[2024-03-20T04:44:05.023+0000] {logging_mixin.py:188} INFO - THIS IS THE FUCKING RESPONSE :  [{'date': '2022-01-01', 'gini': 0.36646, 'state': 'Johor', 'poverty': 4.6, 'income_mean': 8517, 'income_median': 6879, 'expenditure_mean': 5342}, {'date': '2022-01-01', 'gini': 0.35938, 'state': 'Kedah', 'poverty': 9.0, 'income_mean': 5550, 'income_median': 4402, 'expenditure_mean': 3765}, {'date': '2022-01-01', 'gini': 0.3854, 'state': 'Kelantan', 'poverty': 13.2, 'income_mean': 4885, 'income_median': 3614, 'expenditure_mean': 3505}]
+[2024-03-20T04:44:05.077+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-03-20T04:44:05.093+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=Airflow_and_Cassandra, task_id=get_rest_api_data, execution_date=20240320T044402, start_date=20240320T044404, end_date=20240320T044405
+[2024-03-20T04:44:05.163+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-03-20T04:44:05.201+0000] {taskinstance.py:3312} INFO - 1 downstream tasks scheduled from follow-on schedule check

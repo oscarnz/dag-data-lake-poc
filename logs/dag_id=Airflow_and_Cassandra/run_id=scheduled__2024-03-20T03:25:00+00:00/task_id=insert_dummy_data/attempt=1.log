@@ -1,0 +1,21 @@
+[2024-03-20T03:26:00.910+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Airflow_and_Cassandra.insert_dummy_data scheduled__2024-03-20T03:25:00+00:00 [queued]>
+[2024-03-20T03:26:00.916+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Airflow_and_Cassandra.insert_dummy_data scheduled__2024-03-20T03:25:00+00:00 [queued]>
+[2024-03-20T03:26:00.917+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-03-20T03:26:00.926+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): insert_dummy_data> on 2024-03-20 03:25:00+00:00
+[2024-03-20T03:26:00.940+0000] {standard_task_runner.py:60} INFO - Started process 5579 to run task
+[2024-03-20T03:26:00.945+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Airflow_and_Cassandra', 'insert_dummy_data', 'scheduled__2024-03-20T03:25:00+00:00', '--job-id', '294', '--raw', '--subdir', 'DAGS_FOLDER/insert_cassandra.py', '--cfg-path', '/tmp/tmp6g0ue9qb']
+[2024-03-20T03:26:00.946+0000] {standard_task_runner.py:88} INFO - Job 294: Subtask insert_dummy_data
+[2024-03-20T03:26:00.985+0000] {task_command.py:423} INFO - Running <TaskInstance: Airflow_and_Cassandra.insert_dummy_data scheduled__2024-03-20T03:25:00+00:00 [running]> on host 52dfb58d56f6
+[2024-03-20T03:26:01.057+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Airflow_and_Cassandra' AIRFLOW_CTX_TASK_ID='insert_dummy_data' AIRFLOW_CTX_EXECUTION_DATE='2024-03-20T03:25:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-03-20T03:25:00+00:00'
+[2024-03-20T03:26:01.065+0000] {base.py:83} INFO - Using connection ID 'cassandra_default' for task execution.
+[2024-03-20T03:26:01.067+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/providers/apache/cassandra/hooks/cassandra.py:120: DeprecationWarning: Legacy execution parameters will be removed in 4.0. Consider using execution profiles.
+  self.cluster = Cluster(**conn_config)
+
+[2024-03-20T03:26:01.077+0000] {cassandra.py:128} WARNING - Downgrading core protocol version from 66 to 65 for 172.18.0.4:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+[2024-03-20T03:26:01.079+0000] {cassandra.py:128} WARNING - Downgrading core protocol version from 65 to 5 for 172.18.0.4:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+[2024-03-20T03:26:01.085+0000] {asyncorereactor.py:455} WARNING - An authentication challenge was not sent, this is suspicious because the driver expects authentication (configured authenticator = PlainTextAuthenticator)
+[2024-03-20T03:26:01.159+0000] {asyncorereactor.py:455} WARNING - An authentication challenge was not sent, this is suspicious because the driver expects authentication (configured authenticator = PlainTextAuthenticator)
+[2024-03-20T03:26:01.189+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-03-20T03:26:01.201+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=Airflow_and_Cassandra, task_id=insert_dummy_data, execution_date=20240320T032500, start_date=20240320T032600, end_date=20240320T032601
+[2024-03-20T03:26:01.244+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-03-20T03:26:01.270+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
